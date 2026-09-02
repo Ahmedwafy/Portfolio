@@ -1,16 +1,19 @@
 "use client";
-import Image from "next/image";
+
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
+
+type ProjectImageProps = {
+  src: string | StaticImageData;
+  alt: string;
+  isActive: boolean;
+};
 
 export default function ProjectImage({
   src,
   alt,
   isActive,
-}: {
-  src: any;
-  alt: string;
-  isActive: boolean;
-}) {
+}: ProjectImageProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -18,6 +21,7 @@ export default function ProjectImage({
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-(--bg-secondary)" />
       )}
+
       <Image
         src={src}
         alt={alt}
