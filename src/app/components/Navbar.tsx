@@ -58,7 +58,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* TOP PILL */}
+      {/* TOP PILL - Navigation bar*/}
       <AnimatePresence>
         {!scrolled && (
           <motion.header
