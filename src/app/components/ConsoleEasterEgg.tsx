@@ -42,7 +42,7 @@ export default function ConsoleEasterEgg() {
       "color: #a855f7; font-size: 14px; font-weight: bold;",
     );
     console.log(
-      "%cLooking for the code? → https://github.com/Ahmedwafy",
+      "%cLooking for the code? → https://github.com/Ahmedwafy/Portfolio",
       "color: #94a3b8; font-size: 12px;",
     );
     console.log(

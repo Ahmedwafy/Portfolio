@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Ahmed Wafy | Frontend Developer",
     description:
       "Frontend Developer specializing in React, Next.js & TypeScript. Building clean, modern web experiences.",
-    url: "https://your-domain.vercel.app", // Change it After Deploy
+    url: "https://portfolio-ochre-nu-85.vercel.app/", // Change it After Deploy
     siteName: "Ahmed Wafy Portfolio",
     images: [
       {
