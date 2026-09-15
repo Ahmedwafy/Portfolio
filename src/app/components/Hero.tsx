@@ -4,10 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useRef } from "react";
-import { type Phase } from "./HeroAnimation";
+import { MorphRing, type Phase } from "./HeroAnimation";
 import herobg2 from "../../../public/herobg2.jpg";
 import herobg5 from "../../../public/herobg5.jpg";
-
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const container = {
@@ -28,8 +27,7 @@ const item = {
 };
 
 export default function Hero() {
-  const [phase] = useState<Phase>("circle");
-  const isOverlay = phase === "overlay";
+  const [phase, setPhase] = useState<Phase>("circle");
   const sectionRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -37,10 +35,7 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  // parallax: BG moves slower
-  // const bgY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const glowY = useTransform(scrollYProgress, [0, 1], [0, 60]);
-  // const contentY = useTransform(scrollYProgress, [0, 1], [0, 40]);
 
   return (
     <section
@@ -48,12 +43,6 @@ export default function Hero() {
       className="min-h-screen pt-16 flex items-center relative overflow-hidden"
       ref={sectionRef}
     >
-      {/* <Image
-        src={cube}
-        alt="enter-Cube"
-        className="opacity-30 absolute scale-30"
-      /> */}
-
       {/* Glow - Deep layer */}
       <motion.div
         className="absolute -top-32 -right-32 w-175 h-175 rounded-full pointer-events-none"
@@ -95,24 +84,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Space */}
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src={herobg6}
-          alt=""
-          className="w-full h-full object-cover object-center opacity-10"
-        />
-      </div> */}
-
-      {/* Space 2 */}
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src={herobg7}
-          alt=""
-          className="w-full h-full object-cover object-center opacity-10"
-        />
-      </div> */}
-
       {/* Stars */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -121,15 +92,6 @@ export default function Hero() {
           className="w-full h-full object-cover object-center opacity-10"
         />
       </div>
-
-      {/* Trees */}
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src={herobg4}
-          alt=""
-          className="w-full h-full object-cover object-center opacity-10"
-        />
-      </div> */}
 
       {/* Vignette — It darkens the edges and removes focus from the text */}
       <div
@@ -165,15 +127,7 @@ export default function Hero() {
       {/* ===== CONTENT ===== */}
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left */}
-        <motion.div
-          className="space-y-6"
-          animate={{
-            scale: isOverlay ? 1.02 : 1,
-            x: isOverlay ? -4 : 0,
-          }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          style={{ transformOrigin: "left center" }}
-        >
+        <motion.div className="space-y-6">
           <motion.div
             className="space-y-6"
             variants={container}
@@ -255,10 +209,11 @@ export default function Hero() {
               variants={item}
               className="flex items-center gap-5 pt-3"
             >
-              {/* GitHub + LinkedIn icons زي ما هم */}
+              {/* GitHub + LinkedIn icons */}
             </motion.div>
           </motion.div>
         </motion.div>
+        <MorphRing phase={phase} setPhase={setPhase} />
       </div>
     </section>
   );

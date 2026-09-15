@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import toast from "react-hot-toast";
-// import Image from "next/image";
-// import herobg8 from "../../../public/herobg8.jpg";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -40,15 +38,6 @@ export default function Contact() {
   };
   return (
     <section id="contact" className="py-24 relative">
-      {/* Astronaut */}
-      {/* <div className="absolute inset-0 -z-1">
-        <Image
-          src={herobg8}
-          alt=""
-          className="w-full h-full object-cover object-center opacity-10"
-        />
-      </div> */}
-
       <div className="max-w-2xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-sm tracking-widest uppercase text-(--accent-2) mb-3">
@@ -167,7 +156,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-full font-medium text-base disabled:opacity-60 inline-flex items-center text-center gap-2"
+                className="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-full font-medium text-base disabled:opacity-60 inline-flex items-center justify-center gap-2"
               >
                 {status === "sending" ? (
                   <>

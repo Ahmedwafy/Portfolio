@@ -30,7 +30,7 @@ const skills = [
   { name: "Git", icon: SiGit, color: "#F05032" },
 ];
 
-// نكرر القائمة مرتين عشان الحركة تبقى سلسة ولا نهائية
+// Duplicate the skills array to create a seamless marquee effect
 const marqueeSkills = [...skills, ...skills];
 
 export default function Skills() {
