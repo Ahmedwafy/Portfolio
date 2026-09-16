@@ -150,8 +150,8 @@ export default function Projects() {
                       >
                         <Link
                           href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target="_blank" // Open in a new tab
+                          rel="noopener noreferrer" // Prevent security vulnerabilities // window.opener === null for security
                           className="btn-primary px-4 py-2 rounded-full text-sm font-medium"
                         >
                           Live Demo →
@@ -160,7 +160,8 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-4 py-2 rounded-full text-sm font-medium border border-white/25 text-white hover:bg-white/10 transition-colors"
+                          className="px-4 py-2 rounded-full text-sm font-medium border border-white/25 text-white hover:bg-white/10 transition-colors flex
+                          items-center"
                         >
                           GitHub
                         </Link>
