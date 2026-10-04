@@ -22,17 +22,6 @@ const projects = [
   },
   {
     id: 2,
-    title: "Treatly",
-    subtitle: "Medical Appointment Booking",
-    description:
-      "Clinic booking app with JWT auth, smart filters, and smooth UI animations.",
-    tech: ["Next.js", "MongoDB", "JWT", "Framer Motion"],
-    live: "https://treatly-olive.vercel.app/",
-    github: "https://github.com/Ahmedwafy/Treatly",
-    image: TreatlyImg,
-  },
-  {
-    id: 3,
     title: "Monito",
     subtitle: "Pet Adoption Platform",
     description:
@@ -41,6 +30,17 @@ const projects = [
     live: "https://monito-liart.vercel.app/",
     github: "https://github.com/Ahmedwafy/Monito",
     image: MonitoImg,
+  },
+  {
+    id: 3,
+    title: "Treatly",
+    subtitle: "Medical Appointment Booking",
+    description:
+      "Clinic booking app with JWT auth, smart filters, and smooth UI animations.",
+    tech: ["Next.js", "MongoDB", "JWT", "Framer Motion"],
+    live: "https://treatly-olive.vercel.app/",
+    github: "https://github.com/Ahmedwafy/Treatly",
+    image: TreatlyImg,
   },
 ];
 const ease = [0.22, 1, 0.36, 1] as const;
