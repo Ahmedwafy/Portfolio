@@ -7,6 +7,7 @@ import TasklyImg from "../../../public/yyy.png";
 import TreatlyImg from "../../../public/Treatly.png";
 import MonitoImg from "../../../public/gggg.png";
 import ProjectImage from "./ProjectImage";
+import { Type } from "lucide-react";
 
 const projects = [
   {
@@ -25,7 +26,7 @@ const projects = [
     title: "Monito",
     subtitle: "Pet Adoption Platform",
     description:
-      "Responsive pet adoption site with advanced filters, multi-step form, and dark mode.",
+      "Full-stack pet adoption app with Next.js, MongoDB, and custom JWT auth (httpOnly cookies)",
     tech: ["Next.js", "TypeScript", "Tailwind"],
     live: "https://monito-liart.vercel.app/",
     github: "https://github.com/Ahmedwafy/Monito",
@@ -36,7 +37,7 @@ const projects = [
     title: "Treatly",
     subtitle: "Medical Appointment Booking",
     description:
-      "Clinic booking app with JWT auth, smart filters, and smooth UI animations.",
+      "Full-stack clinic booking app with JWT auth, smart filters, and smooth UI animations.",
     tech: ["Next.js", "MongoDB", "JWT", "Framer Motion"],
     live: "https://treatly-olive.vercel.app/",
     github: "https://github.com/Ahmedwafy/Treatly",
