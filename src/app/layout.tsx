@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-ochre-nu-85.vercel.app"),
+
   title: "Ahmed Wafy | Frontend Developer",
   description:
     "Frontend Developer specializing in React, Next.js & TypeScript. Building clean, modern, and performant web experiences.",

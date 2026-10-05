@@ -52,6 +52,28 @@ export default function Contact() {
           </p>
         </div>
 
+        {/* Contact info */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 text-sm">
+          <Link
+            href="mailto:ahmedwafyasu@gmail.com"
+            className="text-(--text-secondary) hover:text-(--accent) transition-colors text-xl"
+          >
+            ahmedwafyasu@gmail.com
+          </Link>
+
+          <span className="hidden sm:inline text-(--border)">|</span>
+
+          <Link
+            href="tel:+201006802443"
+            className="text-(--text-secondary) hover:text-(--accent) transition-colors text-xl"
+          >
+            +20 100 680 2443
+          </Link>
+        </div>
+
+        <hr className="border-(--border) my-5" />
+
+        {/* Contact form */}
         <AnimatePresence mode="wait">
           {status === "sent" ? (
             <motion.div
@@ -170,7 +192,6 @@ export default function Contact() {
             </motion.form>
           )}
         </AnimatePresence>
-
         <div className="mt-16 pt-10 border-t border-(--border) flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-(--text-secondary)">
           <p>© {new Date().getFullYear()} Ahmed Wafy. All rights reserved.</p>
           <div className="flex gap-6">

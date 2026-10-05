@@ -51,9 +51,8 @@ export default function About() {
                 performant and delightful web interfaces.
               </p>
               <p>
-                I specialize in React, Next.js and TypeScript, and I enjoy
-                building full-stack applications with tools like Supabase,
-                MongoDB.
+                I specialize in React, Next.js and TypeScript, building
+                full-stack applications with tools like Supabase, MongoDB.
               </p>
               <p>
                 When I&apos;m not coding, I explore new UI patterns, learn new
